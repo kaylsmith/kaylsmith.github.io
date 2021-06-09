@@ -25,8 +25,8 @@
      *      createCollectable(type, x, y, gravity, bounce);
      * 
      *      type: The type of the collectable, use the type Object above.
-     *      x: The x coordineate for the collectable.
-     *      y: The y coordineate for the collectable.
+     *      x: (type.max,240,180,6,0.8);
+     *      y:(type.grace,400,540,8,0.9) 
      *      gravity: OPTIONAL The gravitational pull on the collectable.
      *      bounce: OPTIONAL A factor effecting how much the collectable will bounce off platforms, etc.
      */ 

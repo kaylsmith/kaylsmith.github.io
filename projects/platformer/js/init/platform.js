@@ -16,12 +16,9 @@
      *      
      *      createPlatform(x, y, scaleX, scaleY);
      * 
-     *      x: The x coordineate for the platform.
-     *      y: The y coordineate for the platform.
-     *      scaleX: OPTIONAL The scale factor on the x-axis, this value will 
-     *              stretch the platform in width.
-     *      scaleY: OPTIONAL The scale factor on the y-axis, this value will 
-     *              stretch the platform in height.
+     *      createPlatfrom(340,400)
+     *      scaleX: (300, 200, 0.2)
+     *      scaleY: (500, 500, 0.1, 10)
      */ 
     function init(game) {
         let createPlatform = platform.create;
