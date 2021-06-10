@@ -18,7 +18,7 @@
      * 
      *      createPlatfrom(340,400)
      *      scaleX: (300, 200, 0.2)
-     *      scaleY: (500, 500, 0.1, 10)
+     *      scaleY: (400, 400, 0.1, 10)
      */ 
     function init(game) {
         let createPlatform = platform.create;
