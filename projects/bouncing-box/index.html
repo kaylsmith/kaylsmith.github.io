@@ -64,7 +64,8 @@
 			var myVariable = 0;
 			var points= 0;
 			var speed = 10;
-			
+			var positionX = 0;
+	
 
 			
 			/* 
@@ -74,19 +75,15 @@
 			*/
 			function update() {
 			  positionX = positionX + speed;
+              moveBoxTo(positionX);
 			  myVariable = myVariable + 10;
-              moveBoxTo(0);
-			  nameOfFunction(200)
-
-		if (positionX > boardWidth){
+			  if (positionX > boardWidth){
                  speed = -speed
-             }
-	         if (positionX < 0)
-            {
+              } else if (positionX < 0){
 				speed = - speed
-			}
+			  }
 
-			};
+			}
 
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
@@ -94,21 +91,10 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				/* positionX = 0;
+				positionX = 0;
 				points = points + 1 
-				changeBoxText(0);
-				speed = speed + 3
-			 }
-
-              if (speed = positive number );{
-				  console.log(add 3 to speed)
-			  }
-			  else if (negative);{
-				  console.log(subtract 3 from speed)
-			  }
-
-              // your code to increase the points variable by 1
-			  changeBoxText(1);
+                speed = speed + 3
+				changeBoxText(points)
 
 			};
 		})();
