@@ -22,17 +22,28 @@ var init = function (window) {
         // TODO 1 : Declare and initialize our variables
       var circles;
       var circles = [];
-
-
-        // TODO 2 : Create a function that draws a circle 
-      function physikz.addRandomVelocity(circle,canvas,10,10);
+     // TODO 2 : Create a function that draws a circle 
+      function drawCircle(){
+          circle = draw.randomCircleInArea(canvas, true, true,'#99')
+         physikz.addRandomVelocity(circle,canvas);
+         view.addChild(circle);
+         circles.push(circle);
+         physikz.updatePosition(circle)
+         game.checkCirclePosition(eachCircle)
+      }
 
         // TODO 3 / 8 : Call the drawCircle() function 
         for(var i= 0; i <= 100; i++){
      drawCircle();
         }
      
-
+       for ( var i = 0 ; i < myCircle.length; i++) {
+        var eachCircle = myCircle[i];
+       }
+      {
+       physikz.updatePosition(circle)
+         game.checkCirclePosition(eachCircle)
+      }
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
         ////////////////////////////////////////////////////////////
@@ -44,7 +55,7 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the circle's position //
-            physikz.updatePosition(eachCircle);
+            
             
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
@@ -74,10 +85,15 @@ var init = function (window) {
             }
             
             // TODO 7 : YOUR CODE STARTS HERE //////////////////////
-            if (circle.y > canvas.width){
+            if (circle.y > canvas.height) {
                 circle.y = 0;
             }
-            if (circle.y 
+            if (circle.y < 0 ) {
+                circle = canvas.height;
+            }
+            if (circle.x < 0 ){
+                circle.x = canvas.width;
+            }
 
 
             // YOUR TODO 7 CODE ENDS HERE //////////////////////////
