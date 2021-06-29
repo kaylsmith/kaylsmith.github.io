@@ -24,26 +24,16 @@ var init = function (window) {
       var circles = [];
      // TODO 2 : Create a function that draws a circle 
       function drawCircle(){
-          circle = draw.randomCircleInArea(canvas, true, true,'#99')
-         physikz.addRandomVelocity(circle,canvas);
+        circle = draw.randomCircleInArea(canvas, true, true,'#999', 2);
+         physikz.addRandomVelocity(circle, canvas, 10 ,10);
          view.addChild(circle);
          circles.push(circle);
-         physikz.updatePosition(circle)
-         game.checkCirclePosition(eachCircle)
       }
 
         // TODO 3 / 8 : Call the drawCircle() function 
-        for(var i= 0; i <= 100; i++){
-     drawCircle();
-        }
-     
-       for ( var i = 0 ; i < myCircle.length; i++) {
-        var eachCircle = myCircle[i];
+       for ( var loopsCompleted = 0 ;  loopsCompleted < 250; loopsCompleted++) {
+        drawCircle();
        }
-      {
-       physikz.updatePosition(circle)
-         game.checkCirclePosition(eachCircle)
-      }
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
         ////////////////////////////////////////////////////////////
@@ -64,10 +54,10 @@ var init = function (window) {
 
             // TODO 9 : Iterate over the array
            
-            for (var a = 0; a > circles.length; a++){
-                var eachCircle = circle[a]
-                physikz.updatePosition(eachCircle);
-                game.checkCirclePosition( eachCircle);
+            for (var i = 0; i < circles.length; i++){
+                var eachValue = circle[i];
+                physikz.updatePosition(eachValue);
+                game.checkCirclePosition(eachValue);
             }
             
         }
@@ -89,10 +79,10 @@ var init = function (window) {
                 circle.y = 0;
             }
             if (circle.y < 0 ) {
-                circle = canvas.height;
+                circle = canvas.height
             }
             if (circle.x < 0 ){
-                circle.x = canvas.width;
+                circle.x = canvas.width
             }
 
 
