@@ -20,7 +20,7 @@ var init = function (window) {
         ////////////////////////////////////////////////////////////
         
         // TODO 1 : Declare and initialize our variables
-      var circles;
+      var circle;
       var circles = [];
      // TODO 2 : Create a function that draws a circle 
       function drawCircle(){
@@ -55,7 +55,7 @@ var init = function (window) {
             // TODO 9 : Iterate over the array
            
             for (var i = 0; i < circles.length; i++){
-                var eachValue = circle[i];
+                var eachValue = circles[i];
                 physikz.updatePosition(eachValue);
                 game.checkCirclePosition(eachValue);
             }
